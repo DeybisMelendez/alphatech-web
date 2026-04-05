@@ -1,0 +1,75 @@
+---
+interface Props {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  href?: string;
+  class?: string;
+}
+
+const { variant = 'primary', size = 'md', href, class: className = '' } = Astro.props;
+
+const baseStyles = `
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+`;
+
+const variants = {
+  primary: `
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 14px 0 rgb(99 102 241 / 0.4);
+  `,
+  secondary: `
+    background: var(--color-dark);
+    color: white;
+  `,
+  outline: `
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  `
+};
+
+const sizes = {
+  sm: `
+    padding: var(--space-2) var(--space-4);
+    font-size: 0.875rem;
+  `,
+  md: `
+    padding: var(--space-3) var(--space-6);
+    font-size: 1rem;
+  `,
+  lg: `
+    padding: var(--space-4) var(--space-8);
+    font-size: 1.125rem;
+  `
+};
+
+const combinedStyles = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+---
+
+{href ? (
+  <a href={href} style={combinedStyles}>
+    <slot />
+  </a>
+) : (
+  <button style={combinedStyles}>
+    <slot />
+  </button>
+)}
+
+<style>
+  a:hover, button:hover {
+    transform: translateY(-2px);
+  }
+  
+  a:active, button:active {
+    transform: translateY(0);
+  }
+</style>

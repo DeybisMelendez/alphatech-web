@@ -1,0 +1,244 @@
+{
+  "company": {
+    "name": "AlphaTech",
+    "slogan": "Transformamos ideas en software excepcional",
+    "description": "Somos una empresa de desarrollo de software en Nicaragua, especializada en crear soluciones tecnológicas innovadoras para personas y empresas que buscan destacar en el mundo digital.",
+    "logo": "/logo.svg",
+    "logoAlt": "AlphaTech Logo"
+  },
+  "hero": {
+    "title": "Desarrollamos el futuro digital",
+    "subtitle": "Creamos aplicaciones web y móviles que transforman negocios y generan impacto positivo en la vida de las personas.",
+    "cta": {
+      "text": "Contáctanos",
+      "link": "#contacto"
+    },
+    "secondaryCta": {
+      "text": "Ver proyectos",
+      "link": "#portfolio"
+    }
+  },
+  "features": [
+    {
+      "icon": "rocket",
+      "title": "Rápidos y Efficientes",
+      "description": "Entregamos proyectos en tiempo récord sin comprometer la calidad del código."
+    },
+    {
+      "icon": "code",
+      "title": "Código Limpio",
+      "description": "Escribimos código maintainible, documentado y escalable para el futuro."
+    },
+    {
+      "icon": "shield",
+      "title": "Seguridad Primero",
+      "description": "Implementamos las mejores prácticas de seguridad en cada proyecto."
+    },
+    {
+      "icon": "support",
+      "title": "Soporte Continuo",
+      "description": "Estamos contigo después del lanzamiento para asegurar el éxito sostenido."
+    }
+  ],
+  "services": [
+    {
+      "icon": "web",
+      "title": "Desarrollo Web",
+      "description": "Creamos sitios web modernos, responsivos y optimizados para conversión. Desde landing pages hasta aplicaciones web complejas.",
+      "features": ["React / Next.js", "Astro / Node.js", "E-commerce", "SEO Optimizado"]
+    },
+    {
+      "icon": "mobile",
+      "title": "Apps Móviles",
+      "description": "Desarrollamos aplicaciones móviles nativas y cross-platform que brindas experiencias excepcionales en iOS y Android.",
+      "features": ["React Native", "Flutter", "iOS Native", "Android Native"]
+    },
+    {
+      "icon": "cloud",
+      "title": "Cloud & DevOps",
+      "description": "Configuramos y gestionamos infraestructura en la nube para que tu aplicación escale de manera eficiente.",
+      "features": ["AWS / GCP / Azure", "Docker / Kubernetes", "CI/CD Pipelines", "Monitoreo 24/7"]
+    },
+    {
+      "icon": "consulting",
+      "title": "Consultoría Tech",
+      "description": "Asesoramos a empresas en su transformación digital, arquitectura de software y selección de tecnologías.",
+      "features": ["Auditoría de código", "Arquitectura de sistemas", "Tech stack advice", "Code reviews"]
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "Sistema de Gestión Hotelera",
+      "description": "Plataforma completa para gestión de reservaciones, inventario y clientes para hoteles boutique.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "tags": ["Web App", "Node.js", "React"],
+      "link": "#"
+    },
+    {
+      "title": "App de Delivery Local",
+      "description": "Aplicación móvil para servicio de entrega local con tracking en tiempo real y pagos integrados.",
+      "image": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=800&h=600&fit=crop",
+      "tags": ["Mobile", "React Native", "Firebase"],
+      "link": "#"
+    },
+    {
+      "title": "Dashboard Analytics",
+      "description": "Tablero de análisis de datos con visualizaciones interactivas y reportes automatizados.",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "tags": ["Dashboard", "D3.js", "Python"],
+      "link": "#"
+    },
+    {
+      "title": "E-commerce de artesanías",
+      "description": "Tienda online con pasarela de pagos, inventario y panel de administración completo.",
+      "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&h=600&fit=crop",
+      "tags": ["E-commerce", "Next.js", "Stripe"],
+      "link": "#"
+    }
+  ],
+  "team": [
+    {
+      "name": "Carlos Rodríguez",
+      "role": "CEO & Fundador",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      "bio": "10+ años de experiencia en desarrollo de software y emprendimiento tech."
+    },
+    {
+      "name": "María González",
+      "role": "CTO",
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
+      "bio": "Especialista en arquitecturas escalables y tecnologías cloud."
+    },
+    {
+      "name": "Diego Martínez",
+      "role": "Lead Developer",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      "bio": "Full-stack developer con pasión por el código limpio y las buenas prácticas."
+    },
+    {
+      "name": "Ana Lucía Pérez",
+      "role": "UI/UX Designer",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      "bio": "Diseñadora con enfoque en experiencias de usuario intuitivas y memorables."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "AlphaTech transformó nuestra visión en una aplicación que superó todas nuestras expectativas. El equipo es profesional y muy comprometido con el proyecto.",
+      "name": "Roberto Jiménez",
+      "role": "CEO, TechStart Nicaragua",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "quote": "La calidad del código y la atención al detalle es excepcional. Nuestra plataforma ha crecido enormemente sin problemas de rendimiento.",
+      "name": "Laura Mendoza",
+      "role": "Directora, Innovatech",
+      "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "quote": "Decidimos trabajar con ellos por su enfoque en soluciones y no solo en código. Entendieron nuestro negocio desde el primer día.",
+      "name": "Miguel Torres",
+      "role": "Fundador, DeliveryNica",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+  "metrics": [
+    { "value": "50+", "label": "Proyectos completados" },
+    { "value": "98%", "label": "Clientes satisfechos" },
+    { "value": "5+", "label": "Años de experiencia" },
+    { "value": "24/7", "label": "Soporte disponible" }
+  ],
+  "pricing": [
+    {
+      "name": "Básico",
+      "price": "$999",
+      "period": "proyecto",
+      "description": "Ideal para startups y proyectos pequeños que necesitan una presencia digital.",
+      "features": [
+        "Landing page o sitio simple",
+        "Diseño responsivo",
+        "SEO básico",
+        "Formulario de contacto",
+        "Soporte por email"
+      ],
+      "popular": false,
+      "cta": "Comenzar"
+    },
+    {
+      "name": "Profesional",
+      "price": "$2,999",
+      "period": "proyecto",
+      "description": "Para empresas que necesitan una solución web completa y escalable.",
+      "features": [
+        "Aplicación web completa",
+        "Diseño personalizado",
+        "CMS administrable",
+        "Integraciones API",
+        "Analytics avanzado",
+        "Soporte prioritario"
+      ],
+      "popular": true,
+      "cta": "Elegir Profesional"
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "description": "Soluciones a medida para proyectos complejos con requisitos específicos.",
+      "features": [
+        "Todo lo de Profesional",
+        "Apps móviles (iOS & Android)",
+        "Infraestructura cloud",
+        "DevOps & CI/CD",
+        "Account manager dedicado",
+        "SLA garantizada"
+      ],
+      "popular": false,
+      "cta": "Contactar"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Cuánto tiempo toma desarrollar un proyecto?",
+      "answer": "El tiempo varía según la complejidad. Un sitio web simple puede tomar 2-4 semanas, mientras que una aplicación web completa puede requerir 2-4 meses. Siempre definimos cronogramas claros desde el inicio."
+    },
+    {
+      "question": "¿Qué tecnologías usan?",
+      "answer": "Trabajamos con las tecnologías más modernas y apropiadas para cada proyecto. Esto incluye React, Next.js, Astro, Node.js, Python, React Native, Flutter, y servicios cloud como AWS, GCP y Azure."
+    },
+    {
+      "question": "¿Ofrecen soporte después de lanzar el proyecto?",
+      "answer": "Sí, todos nuestros proyectos incluyen un período de soporte gratuito. También ofrecemos planes de mantenimiento continuo para asegurar que tu aplicación se mantenga actualizada y segura."
+    },
+    {
+      "question": "¿Pueden trabajar con proyectos existentes?",
+      "answer": "Absolutamente. Podemos integrarnos con proyectos existentes, realizar auditorías de código, optimizar rendimiento y agregar nuevas funcionalidades."
+    },
+    {
+      "question": "¿Cómo es el proceso de trabajo?",
+      "answer": "Comenzamos con una reunión de discovery para entender tus necesidades. Luego enviamos una propuesta detallada con alcance, timeline y presupuesto. Una vez aprobado, trabajamos en sprints ágiles con entregas frecuentes."
+    }
+  ],
+  "cta": {
+    "title": "¿Listo para impulsar tu proyecto?",
+    "subtitle": "Agenda una llamada gratuita de 30 minutos y descubre cómo podemos ayudarte a alcanzar tus objetivos.",
+    "buttonText": "Programar llamada",
+    "buttonLink": "#contacto"
+  },
+  "contact": {
+    "email": "hola@alphatech.ni",
+    "phone": "+505 8888 8888",
+    "address": "Managua, Nicaragua",
+    "hours": "Lun - Vie: 8:00 AM - 6:00 PM"
+  },
+  "social": {
+    "github": "https://github.com/alphatech",
+    "linkedin": "https://linkedin.com/company/alphatech",
+    "twitter": "https://twitter.com/alphatechni",
+    "instagram": "https://instagram.com/alphatechni"
+  },
+  "footer": {
+    "tagline": "Construyendo el futuro digital de Nicaragua.",
+    "copyright": "2024 AlphaTech. Todos los derechos reservados."
+  }
+}

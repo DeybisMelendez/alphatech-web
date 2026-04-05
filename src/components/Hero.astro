@@ -1,0 +1,164 @@
+---
+import config from '../../config.json';
+import Button from './Button.astro';
+---
+
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-gradient"></div>
+    <div class="hero-grid"></div>
+  </div>
+  
+  <div class="container hero-content">
+    <h1 class="hero-title">
+      {config.hero.title}
+      <span class="gradient-text"> {config.company.slogan.split(' ').slice(0, 2).join(' ')}</span>
+    </h1>
+    <p class="hero-subtitle">{config.hero.subtitle}</p>
+    
+    <div class="hero-cta">
+      <Button href={config.hero.cta.link} variant="primary" size="lg">
+        {config.hero.cta.text}
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 10h12M12 4l6 6-6 6"/>
+        </svg>
+      </Button>
+      <Button href={config.hero.secondaryCta.link} variant="outline" size="lg">
+        {config.hero.secondaryCta.text}
+      </Button>
+    </div>
+
+    <div class="hero-stats">
+      {config.metrics.map(metric => (
+        <div class="stat">
+          <span class="stat-value">{metric.value}</span>
+          <span class="stat-label">{metric.label}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  #hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 72px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(139, 92, 246, 0.1), transparent);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent);
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-dark);
+    margin-bottom: var(--space-6);
+    line-height: 1.1;
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--color-gray);
+    max-width: 600px;
+    margin: 0 auto var(--space-8);
+    line-height: 1.7;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    margin-bottom: var(--space-12);
+  }
+
+  .hero-cta :global(a) {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+    padding: var(--space-8);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-xl);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-primary);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--color-gray);
+  }
+
+  @media (min-width: 768px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+
+    .hero-cta {
+      flex-direction: row;
+    }
+
+    .hero-stats {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 700px;
+    }
+  }
+</style>

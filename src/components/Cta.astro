@@ -1,0 +1,69 @@
+---
+import config from '../../config.json';
+import Button from './Button.astro';
+---
+
+<section id="contacto" class="cta-section">
+  <div class="cta-bg">
+    <div class="cta-gradient"></div>
+  </div>
+  <div class="container cta-content">
+    <h2 class="cta-title">{config.cta.title}</h2>
+    <p class="cta-subtitle">{config.cta.subtitle}</p>
+    <Button href={config.cta.buttonLink} variant="primary" size="lg">
+      {config.cta.buttonText}
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 10h12M12 4l6 6-6 6"/>
+      </svg>
+    </Button>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    position: relative;
+    padding: var(--space-24) 0;
+    overflow: hidden;
+  }
+
+  .cta-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .cta-gradient {
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-dark);
+  }
+
+  .cta-content {
+    text-align: center;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: var(--space-4);
+  }
+
+  .cta-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 500px;
+    margin: 0 auto var(--space-8);
+    line-height: 1.7;
+  }
+
+  .cta-content :global(a) {
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .cta-title {
+      font-size: 2.5rem;
+    }
+  }
+</style>

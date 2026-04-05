@@ -1,0 +1,120 @@
+---
+import config from '../../config.json';
+---
+
+<section id="testimonials" class="section">
+  <div class="container">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <p class="section-subtitle">Historias de éxito de empresas que confiaron en nosotros para transformar sus ideas en realidad.</p>
+    
+    <div class="testimonials-grid">
+      {config.testimonials.map((testimonial, index) => (
+        <div class="testimonial-card" style={`--delay: ${index * 100}ms`}>
+          <div class="testimonial-quote">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M10 8C10 5.23858 7.76142 3 5 3C2.23858 3 0 5.23858 0 8C0 10.7614 2.23858 13 5 13V16C5 16 4 20 8 20H9C9 20 8 16 8 13V12H13V13C13 13 12 20 12 20H13C17 20 16 16 16 16V8H10Z" fill="var(--color-primary)" opacity="0.2"/>
+            </svg>
+            <p>{testimonial.quote}</p>
+          </div>
+          <div class="testimonial-author">
+            <img src={testimonial.avatar} alt={testimonial.name} class="testimonial-avatar" />
+            <div class="testimonial-info">
+              <span class="testimonial-name">{testimonial.name}</span>
+              <span class="testimonial-role">{testimonial.role}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .testimonial-card {
+    background: white;
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all var(--transition-base);
+    animation: fadeInUp 0.6s ease backwards;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(99, 102, 241, 0.2);
+  }
+
+  .testimonial-quote {
+    position: relative;
+    margin-bottom: var(--space-6);
+  }
+
+  .testimonial-quote svg {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    transform: scaleX(-1);
+  }
+
+  .testimonial-quote p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+  }
+
+  .testimonial-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-name {
+    font-weight: 600;
+    color: var(--color-dark);
+    font-size: 0.9375rem;
+  }
+
+  .testimonial-role {
+    font-size: 0.8125rem;
+    color: var(--color-gray);
+  }
+
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

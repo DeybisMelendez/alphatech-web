@@ -1,0 +1,113 @@
+---
+import config from '../../config.json';
+---
+
+<section id="faq" class="section">
+  <div class="container">
+    <h2 class="section-title">Preguntas Frecuentes</h2>
+    <p class="section-subtitle">¿Tienes dudas? Aquí respondemos las preguntas más comunes sobre nuestros servicios.</p>
+    
+    <div class="faq-list">
+      {config.faq.map((item, index) => (
+        <details class="faq-item" name="faq">
+          <summary class="faq-question">
+            <span>{item.question}</span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 7.5L10 12.5L15 7.5"/>
+            </svg>
+          </summary>
+          <div class="faq-answer">
+            <p>{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .faq-item {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .faq-item:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .faq-item[open] {
+    box-shadow: var(--shadow-md);
+    border-color: rgba(99, 102, 241, 0.2);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-6);
+    cursor: pointer;
+    list-style: none;
+    font-weight: 600;
+    color: var(--color-dark);
+    font-size: 1rem;
+    transition: color var(--transition-fast);
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question:hover {
+    color: var(--color-primary);
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    transition: transform var(--transition-base);
+    color: var(--color-gray);
+  }
+
+  .faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+    color: var(--color-primary);
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-6) var(--space-6);
+  }
+
+  .faq-answer p {
+    color: var(--color-gray);
+    line-height: 1.7;
+    font-size: 0.9375rem;
+  }
+</style>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.open) {
+            otherItem.open = false;
+          }
+        });
+      }
+    });
+  });
+</script>

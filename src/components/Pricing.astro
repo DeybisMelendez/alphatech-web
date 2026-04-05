@@ -1,0 +1,188 @@
+---
+import config from '../../config.json';
+import Button from './Button.astro';
+---
+
+<section id="precios" class="section" style="background: var(--color-bg-alt);">
+  <div class="container">
+    <h2 class="section-title">Planes y Precios</h2>
+    <p class="section-subtitle">Elige el plan que mejor se adapte a tus necesidades. Todos incluyen soporte y mantenimiento básico.</p>
+    
+    <div class="pricing-grid">
+      {config.pricing.map(plan => (
+        <div class={`pricing-card ${plan.popular ? 'popular' : ''}`}>
+          {plan.popular && <span class="popular-badge">Más popular</span>}
+          <div class="pricing-header">
+            <h3 class="pricing-name">{plan.name}</h3>
+            <div class="pricing-price">
+              <span class="price">{plan.price}</span>
+              {plan.period && <span class="period">/{plan.period}</span>}
+            </div>
+            <p class="pricing-description">{plan.description}</p>
+          </div>
+          <ul class="pricing-features">
+            {plan.features.map(feature => (
+              <li>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M16.5 5L7.5 14L3.5 10" stroke="var(--color-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <div class="pricing-cta">
+            <Button href="#contacto" variant={plan.popular ? 'primary' : 'secondary'} class="cta-btn">
+              {plan.cta}
+            </Button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+
+  .pricing-card {
+    background: white;
+    padding: var(--space-8);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    transition: all var(--transition-base);
+  }
+
+  .pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .pricing-card.popular {
+    background: var(--color-dark);
+    color: white;
+    transform: scale(1.02);
+  }
+
+  .pricing-card.popular:hover {
+    transform: scale(1.02) translateY(-8px);
+  }
+
+  .popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--space-1) var(--space-4);
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .pricing-header {
+    text-align: center;
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--space-6);
+  }
+
+  .pricing-card.popular .pricing-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .pricing-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--space-3);
+    color: var(--color-dark);
+  }
+
+  .pricing-card.popular .pricing-name {
+    color: white;
+  }
+
+  .pricing-price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: var(--space-1);
+    margin-bottom: var(--space-3);
+  }
+
+  .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+  }
+
+  .pricing-card.popular .price {
+    color: white;
+  }
+
+  .period {
+    font-size: 0.9375rem;
+    color: var(--color-gray);
+  }
+
+  .pricing-card.popular .period {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .pricing-description {
+    font-size: 0.875rem;
+    color: var(--color-gray);
+    line-height: 1.5;
+  }
+
+  .pricing-card.popular .pricing-description {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+
+  .pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: 0.9375rem;
+    color: var(--color-text);
+  }
+
+  .pricing-card.popular .pricing-features li {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .pricing-cta {
+    text-align: center;
+  }
+
+  .pricing-cta :global(.cta-btn) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+
+    .pricing-card.popular {
+      padding: var(--space-10);
+    }
+  }
+</style>

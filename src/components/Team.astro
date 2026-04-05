@@ -1,0 +1,93 @@
+---
+import config from '../../config.json';
+---
+
+<section id="equipo" class="section" style="background: var(--color-bg-alt);">
+  <div class="container">
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <p class="section-subtitle">Profesionales apasionados por la tecnología y comprometidos con el éxito de cada proyecto.</p>
+    
+    <div class="team-grid">
+      {config.team.map(member => (
+        <div class="team-card">
+          <div class="team-image">
+            <img src={member.image} alt={member.name} loading="lazy" />
+          </div>
+          <div class="team-content">
+            <h3 class="team-name">{member.name}</h3>
+            <p class="team-role">{member.role}</p>
+            <p class="team-bio">{member.bio}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .team-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+  }
+
+  .team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .team-image {
+    aspect-ratio: 1;
+    overflow: hidden;
+  }
+
+  .team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .team-card:hover .team-image img {
+    transform: scale(1.05);
+  }
+
+  .team-content {
+    padding: var(--space-5);
+  }
+
+  .team-name {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    margin-bottom: var(--space-1);
+  }
+
+  .team-role {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: var(--space-3);
+  }
+
+  .team-bio {
+    font-size: 0.875rem;
+    color: var(--color-gray);
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .team-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
