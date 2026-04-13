@@ -21,13 +21,13 @@
   "features": [
     {
       "icon": "rocket",
-      "title": "Rápidos y Efficientes",
+      "title": "Rápidos y Eficientes",
       "description": "Entregamos proyectos en tiempo récord sin comprometer la calidad del código."
     },
     {
       "icon": "code",
       "title": "Código Limpio",
-      "description": "Escribimos código maintainible, documentado y escalable para el futuro."
+      "description": "Escribimos código mantenible, documentado y escalable para el futuro."
     },
     {
       "icon": "shield",
@@ -50,7 +50,7 @@
     {
       "icon": "mobile",
       "title": "Apps Móviles",
-      "description": "Desarrollamos aplicaciones móviles nativas y cross-platform que brindas experiencias excepcionales en iOS y Android.",
+      "description": "Desarrollamos aplicaciones móviles nativas y cross-platform que brindan experiencias excepcionales en iOS y Android.",
       "features": ["React Native", "Flutter", "iOS Native", "Android Native"]
     },
     {
@@ -63,7 +63,7 @@
       "icon": "consulting",
       "title": "Consultoría Tech",
       "description": "Asesoramos a empresas en su transformación digital, arquitectura de software y selección de tecnologías.",
-      "features": ["Auditoría de código", "Arquitectura de sistemas", "Tech stack advice", "Code reviews"]
+      "features": ["Auditoría de código", "Arquitectura de sistemas", "Asesoría tecnológica", "Revisiones de código"]
     }
   ],
   "portfolio": [
@@ -145,7 +145,7 @@
   "metrics": [
     { "value": "50+", "label": "Proyectos completados" },
     { "value": "98%", "label": "Clientes satisfechos" },
-    { "value": "5+", "label": "Años de experiencia" },
+    { "value": "15+", "label": "Años de experiencia" },
     { "value": "24/7", "label": "Soporte disponible" }
   ],
   "pricing": [
@@ -182,7 +182,7 @@
     },
     {
       "name": "Enterprise",
-      "price": "Custom",
+      "price": "Personalizado",
       "period": "",
       "description": "Soluciones a medida para proyectos complejos con requisitos específicos.",
       "features": [
@@ -190,7 +190,7 @@
         "Apps móviles (iOS & Android)",
         "Infraestructura cloud",
         "DevOps & CI/CD",
-        "Account manager dedicado",
+        "Gerente de cuentas dedicado",
         "SLA garantizada"
       ],
       "popular": false,

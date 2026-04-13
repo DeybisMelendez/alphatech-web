@@ -1,12 +1,12 @@
 # AGENTS.md - AlphaTech Landing Page
 
-## Descripcion del Proyecto
+## Descripción del proyecto
 
-Landing Page para AlphaTech, empresa de desarrollo de software en Nicaragua. El objetivo es ofrecer soluciones de aplicaciones y web a personas y empresas. Proyecto pequeño, equipo compacto de desarrolladores entusiastas y modernos.
+Landing page para AlphaTech, empresa de desarrollo de software en Nicaragua. El objetivo es ofrecer soluciones de aplicaciones y web a personas y empresas. Proyecto pequeño, equipo compacto de desarrolladores entusiastas y modernos.
 
-**Tecnologias**: Astro 6.x, JavaScript, CSS puro.
+**Tecnologías**: Astro 6.x, JavaScript, CSS puro.
 
-**Principio Fundamental**: Codigo simple, sencilo, facil de leer y comprender. Sin complicaciones.
+**Principio fundamental**: Código simple, sencillo, fácil de leer y comprender. Sin complicaciones.
 
 ---
 
@@ -23,7 +23,7 @@ bun dev
 # o
 npm run dev
 
-# Build de produccion - Genera archivo ./dist/
+# Build de producción - Genera archivo ./dist/
 bun build
 # o
 npm run build
@@ -51,14 +51,14 @@ bun astro check    # Verifica tipos en archivos .astro y .ts
 
 ```
 /
-├── public/              # Archivos estaticos (favicon, imagenes publicas)
+├── public/              # Archivos estáticos (favicon, imágenes públicas)
 ├── src/
-│   ├── assets/          # Recursos compilados (SVG, imagenes)
+│   ├── assets/          # Recursos compilados (SVG, imágenes)
 │   ├── components/      # Componentes Astro reutilizables
-│   ├── layouts/         # Layouts base para paginas
-│   └── pages/           # Rutas y paginas (index.astro =/)
-├── astro.config.mjs     # Configuracion de Astro
-├── tsconfig.json        # Configuracion de TypeScript
+│   ├── layouts/         # Layouts base para páginas
+│   └── pages/           # Rutas y páginas (index.astro =/)
+├── astro.config.mjs     # Configuración de Astro
+├── tsconfig.json        # Configuración de TypeScript
 └── package.json
 ```
 
@@ -68,16 +68,16 @@ bun astro check    # Verifica tipos en archivos .astro y .ts
 
 ### Reglas Generales
 
-1. **Codigo en Ingles**: Todas las variables, funciones, comentarios de codigo, clases y IDs en ingles
-2. **Documentacion en Espanol**: Comentarios explicativos y archivos .md en espanol
-3. **Simplicidad primero**: Evitar abstracciones innecesarias. Codigo simple > codigo inteligente
-4. **KISS (Keep It Simple, Stupid)**: Cada archivo, funcion y componente debe ser facil de entender
+1. **Código en inglés**: Todas las variables, funciones, comentarios de código, clases y IDs en inglés
+- **Documentación en español**: Comentarios explicativos y archivos .md en español
+- **Simplicidad primero**: Evitar abstracciones innecesarias. Código simple > código inteligente
+- **KISS (Keep It Simple, Stupid)**: Cada archivo, función y componente debe ser fácil de entender
 
 ### Archivos Astro (.astro)
 
-- **Frontmatter (---)**: Imports al inicio, luego variables y logica simple
-- **Template**: HTML semantico, usar indentacion de 2 espacios
-- **Estilos**: CSSscoped dentro del componente, sin frameworks CSS
+- **Frontmatter (---)**: Imports al inicio, luego variables y lógica simple
+- **Template**: HTML semántico, usar indentación de 2 espacios
+- **Estilos**: CSS scoped dentro del componente, sin frameworks CSS
 
 ```astro
 ---
@@ -117,7 +117,7 @@ const title = 'AlphaTech';
 - **CSS Puro**: No usar frameworks como Tailwind, Bootstrap, etc.
 - **Scope por componente**: Usar `<style>` scoped en cada componente .astro
 - **Variables CSS**: Definir variables en `:root` para colores y espaciado consistente
-- **Mobile-first**: Desarrollar para movil primero, luego media queries para desktop
+- **Mobile-first**: Desarrollar para móvil primero, luego media queries para desktop
 - **Unidades relativas**: Preferir `rem` sobre `px` para tamanos de fuente
 
 ```css
@@ -136,7 +136,7 @@ const title = 'AlphaTech';
 
 - **Vanilla JS**: Sin frameworks de JS (React, Vue, etc.)
 - **ES Modules**: Usar `import/export` en archivos .js/.ts
-- **Funciones pequenas**: Cada funcion hace una sola cosa
+- **Funciones pequeñas**: Cada función hace una sola cosa
 - **Nombres descriptivos**: Funciones con nombres claros como `validateEmail()` no `vE()`
 
 ```javascript
@@ -165,7 +165,7 @@ interface ServiceProps {
 }
 ```
 
-### HTML Semantico
+### HTML semántico
 
 - Usar etiquetas semanticas: `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
 - Cada seccion debe tener un heading (`<h1>` - `<h6>`)
@@ -210,15 +210,15 @@ const cssClass = `btn btn-${variant}`;
 
 ## Errores Comunes a Evitar
 
-1. **No complicate**: Si sientes que necesitas una abstraction, pregúntate si realmente la necesitas
-2. **No repitas codigo**: Si ves CSS duplicado, considera una clase global o CSS custom properties
+1. **No te compliques**: Si sientes que necesitas una abstracción, pregúntate si realmente la necesitas
+2. **No repitas código**: Si ves CSS duplicado, considera una clase global o CSS custom properties
 3. **No mezcles responsabilidades**: Un componente = una responsabilidad
 4. **No optimices prematuramente**: Primero hazlo funcionar, luego optimiza si es necesario
-5. **Noignes el mobile**: Siempre probar en vista movil
+5. **No ignores el mobile**: Siempre probar en vista móvil
 
 ---
 
 ## Recursos
 
-- [Documentacion Astro](https://docs.astro.build)
+- [Documentación Astro](https://docs.astro.build)
 - [Sintaxis Astro](https://docs.astro.build/en/basics/astro-syntax/)
